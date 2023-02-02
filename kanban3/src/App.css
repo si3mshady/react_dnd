@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+
+* {
+ 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  
+   background-color: black;
+   color: white;
+}
+
+
+.top {
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.top > h1 {
+  /* margin-bottom: 20px; */
+  font-family: 'Courier New', Courier, monospace;
+}

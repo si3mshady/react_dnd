@@ -1,0 +1,10 @@
+.card {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+    display: flex;
+    border-radius: 10px;
+    background-color: black;
+    /* padding-bottom: 10px; */
+    margin-bottom: 3px;
+  
+}

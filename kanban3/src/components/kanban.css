@@ -1,0 +1,22 @@
+.kanban  {
+
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+
+}
+
+
+.title {
+
+    text-align: left;
+    padding-bottom: 20px;
+}
+.section {
+    border-radius: 10px;
+    background-color: darkslategrey;
+    padding: 20px;
+    width: 400px;
+}
