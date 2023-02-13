@@ -1,22 +1,37 @@
+import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 import { Draggable, DragDropContext, Droppable } from 'react-beautiful-dnd'
-
-import starter_data from './../starter_data'
-
+import starter_data from '../starter_data'
 import Card from './Card'
 
 import './kanban.css'
 
-
-
-
+const port = process.env.REACT_APP_PORT  ? process.env.REACT_APP_PORT: 888
+const host = process.env.REACT_APP_HOST  ? process.env.REACT_APP_HOST  : 'localhost'
+const server = `http://${host}:${port}/load`
 
 export default function Kanban() {
 
-// const   [listOrder, setListOrder] = useState(starter_data)
+    const   [listOrder, setListOrder] = useState([])
 
-const [listOrder, setListOrder] = useState(starter_data)
+    useState(() => {
+        const init = async() =>{
+
+            const starter_data = await axios.get(server)
+
+            setListOrder(starter_data.data)
+    
+     
+        }
+
+        init()
+     },[])
+     
+     
+
+
+
 
     const dropReset = result => {
         if (!result.destination) return
